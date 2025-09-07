@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Bulb On/Off</title>
+    <style>
+        body {
+            background: #f5f6fa;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        h2 {
+            color: #312d2d;
+            margin-bottom: 10px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+        }
+        .bulb-img {
+            display: block;
+            margin: 0 auto;
+            width: 30vw;
+            max-width: 200px;
+            min-width: 80px;
+            height: auto;
+            transition: width 0.3s;
+        }
+        .btn-group {
+            display: flex;
+            gap: 16px;
+        }
+        .modern-btn {
+            padding: 12px 28px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 25px;
+            background: linear-gradient(90deg, #00c3ff 0%, #ffff1c 100%);
+            color: #222;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: background 0.2s, transform 0.2s;
+        }
+        .modern-btn:hover {
+            background: linear-gradient(90deg, #ffff1c 0%, #00c3ff 100%);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Modern Bulb On/Off</h3>
+        <p> Click the buttons to turn the bulb on or off.</p>
+        <img id="myImage" class="bulb-img" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="Bulb">
+        <div class="btn-group">
+            <button class="modern-btn" onclick="document.getElementById('myImage').src='https://www.w3schools.com/js/pic_bulbon.gif'">
+                Turn On
+            </button>
+            <button class="modern-btn" onclick="document.getElementById('myImage').src='https://www.w3schools.com/js/pic_bulboff.gif'">
+                Turn Off
+            </button>
+        </div>
+    </div>
+</body>
+</html>
